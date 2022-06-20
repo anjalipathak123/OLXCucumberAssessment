@@ -1,0 +1,59 @@
+package OLXDefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class DefinitionsClass {
+
+	@Given("user should be on home page")
+	public void user_should_be_on_home_page() throws Exception {
+	    
+		OLXTests.OlxTest.navigateToUrl();
+	}
+
+	@When("^user will enter (.*) in search Field$")
+	public void user_will_enter_product_in_search_field(String s) {
+	    
+		OLXTests.OlxTest.enterProductOnSearchField(s);
+	}
+
+	@When("click on search button")
+	public void click_on_search_button() {
+	   
+		OLXTests.OlxTest.clickOnSearchButton();
+		OLXTests.OlxTest.forScrolling();
+	}
+
+	@Then("user should land on products page")
+	public void user_should_land_on_products_page() {
+	    
+	}
+
+	@Given("user should be on home age")
+	public void user_should_be_on_home_age() {
+	   
+	}
+
+	@When("user will click on login")
+	public void user_will_click_on_login() {
+	    
+	}
+
+	@When("user will click on continue with phone")
+	public void user_will_click_on_continue_with_phone() {
+	    
+	}
+
+	@When("user will enter mobile number")
+	public void user_will_enter_mobile_number() {
+	    
+	}
+
+	@Then("user should encounter OTP page")
+	public void user_should_encounter_otp_page() {
+	    
+	}
+
+
+}

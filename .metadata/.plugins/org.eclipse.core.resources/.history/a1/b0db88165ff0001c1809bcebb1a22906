@@ -1,0 +1,19 @@
+package Utility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SetDriverProperty {
+
+	public static WebDriver setDriver(String browser,WebDriver driver)
+	{
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","./src/test/resources/driverss/chromedriver.exe");
+			driver=new ChromeDriver();
+			driver.manage().window().maximize();;
+		}
+		else if(browser.equalsIgnoreCase("edge"))
+		return driver;
+	}
+}

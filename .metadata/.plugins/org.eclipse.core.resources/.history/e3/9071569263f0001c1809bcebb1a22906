@@ -1,0 +1,12 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+
+	public static WebDriver searchField(WebDriver driver)
+	{
+		return driver.findElement(By.xpath("//input[@placeholder=\"cars\"]"));
+	}
+}

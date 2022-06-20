@@ -1,0 +1,25 @@
+package OLXTests;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class OlxTest {
+
+	public static WebDriver driver;
+	public static JavascriptExecutor js;
+	public static Actions action;
+	
+	public static void initializeDriver(String browser) throws Exception
+	{
+		driver=Utility.SetDriverProperty.setDriver(Utility.PropertyReader.browserReader(browser), driver);
+	}
+	public static void navigateToUrl() throws Exception
+	{
+		driver.get(Utility.PropertyReader.baseURLReader());
+	}
+	public static void enterProductinSearchField(String s)
+	{
+		Pages.HomePage.searchField(driver).sendKeys(s);
+	}
+}
